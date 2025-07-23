@@ -1,0 +1,35 @@
+# Technical Architecture
+- **Componentes**:
+  - MCP Schema (JSON Schema)
+  - Servidor MCP (FastAPI + Pydantic propuesto)
+  - Módulo de integración Home Assistant (REST API)
+  - Módulo de prompts para LLM
+- **Data models**: Orden MCP (input/output), contexto, resultado.
+- **APIs**: REST para recibir órdenes, endpoints para integración con servicios.
+- **Infraestructura**: Desplegable en cualquier entorno Python, requiere token de Home Assistant.
+
+# Development Roadmap
+- **Fase 1: Diseño conceptual**
+  - Definir entidades y primer draft del schema MCP
+- **Fase 2: Validación técnica**
+  - Prototipo de servidor MCP y validación de schema
+- **Fase 3: Integración con LLM**
+  - Prompts y pruebas de ida y vuelta
+- **Fase 4: Extensiones y mejoras**
+  - Modularidad para otros servicios, mejoras de seguridad y UX
+
+# Logical Dependency Chain
+- Primero: MCP Schema y entidades base
+- Luego: Servidor MCP y validación de órdenes
+- Después: Integración con Home Assistant
+- Finalmente: Prompts LLM y pruebas end-to-end
+
+# Risks and Mitigations
+- **Desafíos técnicos**: Validación robusta de órdenes, manejo de errores en integración HA
+- **MVP**: Priorizar flujo básico de orden → acción → feedback
+- **Recursos**: Modularidad para facilitar contribuciones y extensiones
+
+# Appendix
+- Ejemplo de orden MCP (ver README)
+- Stack propuesto: FastAPI + Pydantic
+- Inspiración: interoperabilidad y agnosticismo de proveedor 
