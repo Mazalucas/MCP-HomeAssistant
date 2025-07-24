@@ -16,14 +16,60 @@
         "id": 2,
         "title": "Prototype MCP Server with FastAPI",
         "description": "Develop a prototype of the MCP server using FastAPI and Pydantic for schema validation.",
-        "details": "Set up a FastAPI project and implement endpoints to handle MCP orders. Use Pydantic models to enforce schema validation. Ensure the server can process requests and return appropriate responses.",
-        "testStrategy": "Write unit tests for each endpoint to ensure correct processing of requests. Use mock data to simulate various order scenarios and validate responses.",
-        "priority": "high",
+        "status": "done",
         "dependencies": [
           1
         ],
-        "status": "in-progress",
-        "subtasks": []
+        "priority": "high",
+        "details": "Set up a FastAPI project with a recommended folder structure. Implement endpoints to handle MCP orders, including a POST /mcp/order for receiving orders and a GET /health for basic health checks. Use Pydantic models for MCPOrder and MCPResult, and validate orders using both Pydantic and JSON Schema for robustness. Simulate order execution by logging actions. Document each endpoint and model, including request/response examples.",
+        "testStrategy": "Write unit tests for the POST /mcp/order endpoint, covering both valid and invalid cases. Use mock data to simulate various order scenarios and validate responses. Ensure that the health check endpoint functions correctly.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set up FastAPI project structure",
+            "description": "Create the recommended folder structure for the FastAPI project, including directories for API endpoints, models, schemas, and core validation logic.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Implement POST /mcp/order endpoint",
+            "description": "Develop the POST /mcp/order endpoint to receive and validate MCP orders using Pydantic and JSON Schema.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Implement GET /health endpoint",
+            "description": "Develop a basic health check endpoint to ensure the server is running correctly.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Write unit tests for endpoints",
+            "description": "Create unit tests for the POST /mcp/order and GET /health endpoints, ensuring correct processing and response handling.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Document endpoints and models",
+            "description": "Document each endpoint and model, including examples of requests and responses in the docstrings or README.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          }
+        ]
       },
       {
         "id": 3,
@@ -35,7 +81,7 @@
         "dependencies": [
           2
         ],
-        "status": "pending",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -48,7 +94,7 @@
         "dependencies": [
           3
         ],
-        "status": "pending",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -132,7 +178,7 @@
     ],
     "metadata": {
       "created": "2025-07-23T15:52:06.810Z",
-      "updated": "2025-07-23T22:44:09.850Z",
+      "updated": "2025-07-24T10:24:17.915Z",
       "description": "Tasks for master context"
     }
   }
